@@ -15,8 +15,36 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Welcome to Flutter'),
         ),
-        body: const Center(
-          child: Text('Hello World'),
+        body: Column(
+          children: [
+            const Text('Hello World'),
+            const Text('Muerte a PHP'),
+            Row(
+              children: const <Widget> [
+                Text('Fila 1'),
+                Text('Fila 2'),
+              ],
+            ),
+            Stack(
+              children: <Widget>[
+                Container(
+                  width: 90,
+                  height: 90,
+                  color: Colors.red,
+                ),
+                Container(
+                  width: 80,
+                  height: 80,
+                  color: Colors.blue,
+                ),
+                Container(
+                  width: 70,
+                  height: 70,
+                  color: Colors.green,
+                ),
+              ],
+            )
+          ],
         ),
       ),
     );
