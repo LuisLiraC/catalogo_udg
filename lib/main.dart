@@ -10,42 +10,39 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Welcome to Flutter',
+      title: 'Catálogo UDG',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Welcome to Flutter'),
+          title: const Text('Catálogo UDG'),
         ),
-        body: Column(
-          children: [
-            const Text('Hello World'),
-            const Text('Muerte a PHP'),
-            Row(
-              children: const <Widget> [
-                Text('Fila 1'),
-                Text('Fila 2'),
-              ],
+        body: Container(
+          width: double.infinity,
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              const Text(
+                  'Bienvenido',
+                  style: TextStyle(
+                      fontSize: 40.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.deepPurple
+                  )
+              ),
+              const Text(
+                'Catálogo UDG',
+                style: TextStyle(
+                  fontSize: 20.0,
+                ),
+              )
+            ],
+          ),
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("images/bg.png"),
+              fit: BoxFit.cover
             ),
-            Stack(
-              children: <Widget>[
-                Container(
-                  width: 90,
-                  height: 90,
-                  color: Colors.red,
-                ),
-                Container(
-                  width: 80,
-                  height: 80,
-                  color: Colors.blue,
-                ),
-                Container(
-                  width: 70,
-                  height: 70,
-                  color: Colors.green,
-                ),
-              ],
-            )
-          ],
-        ),
+          ),
+        )
       ),
     );
   }
