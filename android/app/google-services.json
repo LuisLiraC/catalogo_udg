@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "670826690841",
+    "project_id": "catalogo-udg",
+    "storage_bucket": "catalogo-udg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670826690841:android:1c472c173ad1954b8eed88",
+        "android_client_info": {
+          "package_name": "com.luislira.catalogo_udg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "670826690841-51pg72jipd4fhffpnlanh2mt6l0mq0i0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyojHUpcMfmuv5Y1VIBLxnPG5Lw_YCMwE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "670826690841-51pg72jipd4fhffpnlanh2mt6l0mq0i0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "670826690841-3am3kfdpmt1lica0thf755u0a3976kl0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.luislira.catalogoUdg"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

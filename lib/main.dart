@@ -4,6 +4,9 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
 Future<Pokemon> fetchPost(int pokemonId) async {
   final response = await http.get(Uri.parse('https://pokeapi.co/api/v2/pokemon/$pokemonId'));
 
@@ -31,8 +34,12 @@ class Pokemon {
   }
 }
 
-void main() {
-  runApp(MyApp(pokemon: fetchPost(400)));
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(MyApp(pokemon: fetchPost(25)));
 }
 
 class MyApp extends StatelessWidget {
