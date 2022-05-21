@@ -41,6 +41,6 @@ class MoviesRepository {
     db.collection('movies')
         .doc(movieId)
         .get()
-        .then((response) => print(response.reference.delete()));
+        .then((response) => response.reference.delete());
   }
 }

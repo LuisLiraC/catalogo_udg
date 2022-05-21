@@ -1,4 +1,5 @@
 import 'package:catalogo_udg/home.dart';
+import 'package:catalogo_udg/movieDetail.dart';
 import 'package:flutter/material.dart';
 import 'package:catalogo_udg/authentication.dart';
 import 'package:catalogo_udg/login.dart';
@@ -47,7 +48,11 @@ class Movies extends StatelessWidget {
                                 children: [
                                   SizedBox(
                                     child: ElevatedButton(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(context,
+                                          MaterialPageRoute(builder: (builder) => MovieDetail(m))
+                                        );
+                                      },
                                       child: Text('Ver detalles'),
                                     ),
                                   ),

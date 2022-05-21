@@ -25,22 +25,15 @@ class Home extends StatelessWidget {
                 child: Text('Lista de Películas'),
               ),
             ),
-            SizedBox(
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Movies())
-                  );
-                },
-                child: Text('Mis Películas'),
-              ),
-            ),
             FutureBuilder(
                 future: AuthenticationHelper().isAdmin(),
                 builder: (context, snapshot) {
                   if (snapshot.hasData && snapshot.data == true) {
                     return SizedBox(
                       child: ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(Colors.green)
+                        ),
                         onPressed: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) => AddMovie())
